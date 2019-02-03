@@ -12,63 +12,75 @@
     <link href="https://fonts.googleapis.com/css?family=Fahkwang" rel="stylesheet">
     <!-- font awesome icons -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-
-
 </head>
-<!-- <body onload="fetchBookmarks()"> -->
+
 <body>
     <!-- header -->
-        <!--  -->
-        <!--  -->
-        <!--  -->
+        <!-- mobile + tablet = content center  -->
+        <!-- desktop = content center -->
     <header class="header">
         <h2>Bookmarker Application</h2>
         <p>A JavaScript project by C D Harris.</p>
-        <!-- <i class="fas fa-align-justify"></i> -->
     </header>
 
     <!-- application interface -->
-        <!--  -->
-        <!--  -->
-        <!--  -->
+        <!-- mobile + tablet = content center; input width = 100%  -->
+        <!-- desktop = content center; input max-width = 1150px -->
     <section class="application">
         <i class="far fa-bookmark"></i>
         <h1>Bookmark Your Favorite Sites!</h1>
+        <!-- app container for user input form -->
         <div class="app__container">
             <!-- user ineraction form, enter the required information to save websiteName + websiteURL -->
-            <form action="" class="application__form" id="appForm">
+            <form class="application__form" id="appForm">
                 <label for="siteName">Website Name :</label><br><br>
-                <input type="text" id="siteName"><br><br>
+                <input type="text" id="siteName" autocomplete="off"><br><br>
                 <label for="siteUrl">Website URL</label><br><br>
-                <input type="text" id="siteUrl"><br><br>
+                <input type="text" id="siteUrl" autocomplete="off"><br><br>
                 <button type="submit">Save</button>
             </form>
         </div>
     </section>
 
-    <!-- user form information output -->
+    <!-- user information output -->
+        <!-- mobile + tablet = content center; flex direction = column  -->
+        <!-- desktop = content center; flex direction = row -->
     <section class="information">
             <i class="far fa-star"></i>
             <h1>Saved Bookmarks</h1>
+            <!-- app container for javascript created elements -->
         <div class="app__container">
-            <!-- element targeted by JavaScript -->
-            <div id="results"></div>
-        <div>
 
+            <!-- element targeted by JavaScript -->
+            <div id="results">
+            <!-- user input results displayed here -->
+                <!-- components:
+                    h3 = siteName;
+                    a btn = siteUrl;
+                    a btn btn__delete = delete from localStorage
+                 -->
+            </div>
+
+        </div>
     </section>
 
     <!-- footer -->
-        <!--  -->
-        <!--  -->
-        <!--  -->
+        <!-- mobile + tablet = content center  -->
+        <!-- desktop = content center -->
     <footer class="footer">
-        <!-- <h5>Links To Other JavaScript Projects :</h5><br>
-        <a href=""><i class="far fa-address-card"></i>Mobile Contacts App</a>
-        <a href=""><i class="far fa-clock"></i>Pomordo Concentration App</a>
-        <a href=""></a> -->
-        <h4>More Projects Available For Viewing At <a href="https://github.com/bionic-fish">My Github</a></h4>
-    </footer>
+        <a href="https://github.com/bionic-fish"><i class="fab fa-github"></i></a>
+        
+        <h4>Browse Developed Projects</h4>
+        <h5>Website Hosted On Github Pages</h5>
+        <br><br>
 
+        <p><a href="http://jigsaw.w3.org/css-validator/check/referer">
+            <img style="border:0;width:88px;height:31px"
+            src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+            alt="Valid CSS!" /></a>
+        </p>
+        
+    </footer>
 
     <!-- ext javascript files -->
     <script src="js/index.js"></script>

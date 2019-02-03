@@ -9,95 +9,114 @@ body {
     font-family: 'Fahkwang', sans-serif;
     text-align: center;
 }
+
 /* header + footer props */
 header.header,
 footer.footer {
     background-color: #333;
     color: #fff;
-    padding: 20px 0px;
+    padding: 10px 0px;
 }
+
 /* section props */
 section.application,
 section.information {
-    padding: 50px 0px;
+    padding: 30px 0px;
     margin: 10px auto;
 }
 section h1 {
     color: #fff;
+    text-decoration: underline;
 }
+
 /* form input props for mobile */
 /* form wrapper */
 form.application__form {
     padding: 20px 0px;
+    
 }
 /* form labels + input props */
 form label {
-    background-color: 000;
-    border-bottom: 2px solid #000;;
+    background-color: #000;
+    font-family: 'Fahkwang', sans-serif;
+    font-size: 25px;
+    /* border-bottom: 2px solid #000; */
     padding: 10px;
     width: 100%;
 }
+/* form inputs linked to input:focus props */
 form input {
-    border: 2px solid #000;
-    width: 100%;
+    background-color: #000;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 125%;
     height: 50px;
     padding: 20px 0px;
     text-align: center;
+    text-transform: uppercase;
+    transition-duration: 1s;
+    transition-property: all;
+    transition-timing-function: ease-in-out;
+    
+    width: 100%;
+}
+/* form focus transition properties */
+form input:focus {
+    background-color: #000;
+    border: none;
+    border-bottom: 2px solid #fff;
+    border-radius: 0px;
+    color: #fff;
+    outline: none;
+    width: 70%;
 }
 form button {
     background: inherit;
     border: 2px solid #fff;
     border-radius: 10px;
     color: #fff;
+    height: 50px;
     letter-spacing: 2px;
     padding: 2px;
-    width: 100px;
-    height: 50px;
-
-    transition-property: all 2s ease;
+    transition-duration: 2s;
+    transition-property: all;
     transition-duration: 1s;
     transition-timing-function: ease;
-
+    width: 100px;
 }
 form button:hover {
     background: red;
-    /* font-weight: bold; */
     text-decoration: underline;
     transform: scale(1.1);
     box-shadow: 8px 8px #333;
-
-
 }
-/* form output props for mobile */
-/* form output display */
+
+/* output props for mobile */
+/* javascript output display */
 .app__container {
     color: #fff;
     margin: 50px auto;
     padding: 10px;
-    
 }
-
 .app__output {
     border: 2px solid #fff;
+    border-radius: 10px;
     background: inherit;
     display: flex;
     flex-direction: column;
-    
-    /* display: flex; */
-    /* height: 50px;
-    padding: 10px;
-    width: 90%;
-    margin: 10px auto;
-    justify-content: center;
-    align-items: center; */
 }
+/* output of website name */
 .app__output h3 {
     font-weight: bolder;
     letter-spacing: 5px;
     text-decoration: underline;
+    text-transform: uppercase;
+    margin: 10px  auto;
 }
+/* output of visit button + delete buttons */
 .app__output a {
-    /* margin: 10px auto; */
+    margin: 10px auto;
     color: #fff;
     letter-spacing: 0;
     padding: 0px;
@@ -112,68 +131,77 @@ form button:hover {
     max-height: 50px;
     margin: 12px auto;
     text-decoration: underline;
+    padding: 20px;
     width: 150px;
     max-width: 150px;
-    padding: 20px;
-
 }
 .btn__delete {
     background: grey;
-    /* width: auto; */
 }
+
 /* font awesome icons */
+.app__container i {
+    color: #fff;
+}
 /* animated banner bookmarks icon */
-section.application i{
+section.application i {
     animation-name: iconRotate;
     animation-direction: alternate;
     animation-duration: 3s;
     animation-iteration-count: infinite;
     background: #000;
     color: red;
-    font-size: 100px;
-    padding: 20px 0px;
+    font-size: 40px;
+    padding: 5px;
 }
-.app__container i {
-    color: #fff;
-}
-
 @keyframes iconRotate {
     0% {transform: rotateY(0deg);}
     50% {transform: rotateY(180deg);}
     100% {transform: rotateY(360deg);}
 }
 
-/* header dropdown icon */
-header.header i {
+/* footer github icon */
+footer.footer i {
+    border-bottom: 2px;
+    color: #fff;
+    font-size: 30px;
     padding: 20px;
+    transition-property: all;
+    transition-duration: 1s;
+}
+footer.footer i:hover {
+    transform: scale(2.0);
+    color: red;
 }
 
+/* media queries for devices over [960px in width] */
+    /* minor changes in layout include:
+         */
 
 
 @media screen and (min-width: 960px) {
     /* application output buttons [visit] & [delete] */
     .app__btn {
         margin-right: 20px;
+        padding-right: 20px;
+        position: relative;
+        top: 0;
+        right: 20px;
     }
     .app__output {
         margin: auto;
         max-width: 1150px;
         flex-direction: row;
         flex-wrap: wrap;
-        
     }
     .flex__item {
         flex: 33.3%;
     }
-    /* span placement */
-    span.left {float: left;}
-    span.right {float: right;}
-
-    .clearfix {
-        clear: both;
-    }
     /* form for desktop view */
     form input {
         max-width: 1150px;
+    }
+    form input:focus {
+        width: 40%;
     }
 }

@@ -37,13 +37,12 @@ function saveBookmark(e) {
 
     // prevent form from submitting
     e.preventDefault();
-
     
 }
 
 // delete bookmark
 function deleteBookmark(url) {
-    console.log(url);
+    
     // get bookmarks from localStorage
     var bookmarks = JSON.parse(localStorage.getItem('bookmarks'));
 
@@ -82,8 +81,7 @@ function fetchBookmarks() {
                                       ' <a class="app__btn flex__item" target="_blank" href="'+url+'"><i class="far fa-arrow-alt-circle-right"></i><br>Visit</a> ' +
                                       ' <a onclick="deleteBookmark(\''+url+'\')" class="app__btn btn__delete flex__item" href="#"><i class="fas fa-times"></i><br>Delete</a> ' +
                                       '</div>';
-        // test to see objects are created in localStorage
-        console.log(bookmarks);
+       
     }
 }
 
